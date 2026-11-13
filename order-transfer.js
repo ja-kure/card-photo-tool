@@ -1,0 +1,5 @@
+const sessionKey='card-order-session';
+function key(){let id=sessionStorage.getItem(sessionKey);if(!id){id=crypto.randomUUID();sessionStorage.setItem(sessionKey,id);}return id;}
+function db(){return new Promise((resolve,reject)=>{const r=indexedDB.open('card-order-transfer',1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+export async function rememberOrder(file){const d=await db();try{await new Promise((resolve,reject)=>{const tx=d.transaction('files','readwrite');tx.objectStore('files').put({file,time:Date.now()},key());tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}finally{d.close();}}
+export async function takeOrder(){const d=await db();try{return await new Promise((resolve,reject)=>{const tx=d.transaction('files','readwrite'),store=tx.objectStore('files'),r=store.get(key());let value=null;r.onsuccess=()=>{const record=r.result;if(record&&Date.now()-record.time<86400000)value=record.file;store.delete(key());};tx.oncomplete=()=>resolve(value);tx.onerror=()=>reject(tx.error);});}finally{d.close();}}

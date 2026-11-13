@@ -1,0 +1,9 @@
+.cardpanel{background:white;border:1px solid #dce2db;border-radius:18px;padding:24px;margin:24px 0}.cardpanel label{display:block;margin:14px 0}.cardpanel input[type=text],#scriptpath,.cardpanel select{width:100%;padding:12px;border:1px solid #cbd4c8;border-radius:8px;font:inherit}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:12px;border-bottom:1px solid #e4e9e1}th{background:#f2f5f0}#preview{max-width:100%;margin-top:18px}#warnings{color:#8c4c0a}#status{white-space:pre-wrap}
+
+.tablewrap input{width:100%;min-width:110px;padding:9px;border:1px solid #cbd5ce;border-radius:6px} pre{white-space:pre-wrap}button:disabled{opacity:.5;cursor:not-allowed}
+
+.steps-header{height:auto;min-height:82px;gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}.steps-header nav{display:flex;gap:12px;flex-wrap:wrap}.steps-header nav a{display:flex;align-items:center;justify-content:center;min-height:48px;min-width:150px;padding:12px 24px;border:1px solid #cbd8cc;border-radius:10px;background:#eef3eb;color:#294b35;text-decoration:none;font-weight:650}.steps-header nav a:hover{background:#dfeadb;border-color:#7c997d}.steps-header nav a:focus-visible{outline:3px solid #365d40;outline-offset:3px}@media(max-width:650px){.steps-header nav{width:100%;gap:8px}.steps-header nav a{flex:1;min-width:0;padding:12px 10px}}
+
+#orderDrop{border:2px dashed #b7c7b2;border-radius:12px;padding:24px;text-align:center;background:#f4f7f0}#orderDrop.drag{background:#dfeadb;border-color:#365d40}#orderDrop p{margin:0 0 14px}#orderDrop p:last-child{margin:14px 0 0;font-size:12px}
+
+.person-photo img{width:54px;height:72px;object-fit:contain}.copy-field{padding:5px 10px;font-size:12px;margin-top:5px}.tablewrap table{min-width:1000px}
